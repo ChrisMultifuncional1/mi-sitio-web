@@ -9,12 +9,36 @@ body {
 }
 
 /* Hero and navigation */
+/*
+ * Hero and navigation container
+ *
+ * The hero section now uses a multi‑stop gradient animated over time to
+ * create a subtle shifting background effect. It is positioned
+ * relative and overflow is hidden so absolutely positioned elements
+ * (such as the particle canvas) can fill the space without affecting
+ * document flow. The background is sized larger than the container
+ * itself and animated with the `gradientAnimation` keyframes defined
+ * below. A dark baseline colour palette is used to maintain contrast
+ * with the light text and interactive elements layered on top.
+ */
 .hero {
-    /* Dark gradient background reminiscent of modern e‑commerce sites */
-    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+    position: relative;
+    overflow: hidden;
+    /* Animated gradient background reminiscent of modern e‑commerce sites */
+    background: linear-gradient(135deg, #1F2937 0%, #111827 50%, #1F2937 100%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 12s ease infinite;
     color: #ffffff;
     padding: 100px 20px;
     text-align: center;
+}
+
+/* Keyframes for the animated background gradient. The positions are
+   shifted along the horizontal axis to create a gentle movement. */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .navbar {
@@ -27,12 +51,15 @@ body {
     background: rgba(0,0,0,0.3);
     border-radius: 8px;
     backdrop-filter: blur(4px);
+    /* Ensure the nav appears above the particle canvas */
+    position: relative;
+    z-index: 2;
 }
 
 .navbar .logo {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #FFFFFF;
+    /* Use an image for the logo; constrain the height and maintain aspect ratio */
+    height: 40px;
+    width: auto;
 }
 
 .nav-links {
@@ -68,6 +95,12 @@ body {
     margin-bottom: 20px;
 }
 
+/* Ensure hero content stays above the particle canvas */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
 /* Call to action button */
 .cta-button {
     display: inline-block;
@@ -92,6 +125,9 @@ body {
     justify-content: center;
     gap: 15px;
     font-size: 0.9em;
+    /* Position relative so it sits above the particle background */
+    position: relative;
+    z-index: 2;
 }
 .categories-nav li a {
     color: #E5E7EB;
@@ -219,4 +255,18 @@ footer {
     padding: 20px;
     margin-top: 60px;
     font-size: 0.9em;
+}
+
+/* Particle canvas styling
+   This element is absolutely positioned to fill the entire hero section
+   and sits behind the content. Pointer events are disabled so that
+   navigation links remain clickable. */
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
 }
