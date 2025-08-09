@@ -2,15 +2,18 @@
 body {
     margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
-    color: #333;
+    /* Modern base text colour and background */
+    color: #4B5563;
+    background-color: #F3F4F6;
     line-height: 1.6;
 }
 
 /* Hero and navigation */
 .hero {
-    background: #0A1931;
-    color: #fff;
-    padding: 60px 20px;
+    /* Modern gradient background for a striking hero section */
+    background: linear-gradient(135deg, #2563EB 0%, #9333EA 100%);
+    color: #ffffff;
+    padding: 80px 20px;
     text-align: center;
 }
 
@@ -39,14 +42,14 @@ body {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #F3F4F6;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #A5C9CA;
+    color: #BFDBFE;
 }
 
 .hero-content h1 {
@@ -69,7 +72,8 @@ h2 {
     font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
-    color: #0A1931;
+    /* Section headings use the primary accent colour */
+    color: #2563EB;
 }
 
 /* Services section */
@@ -80,16 +84,16 @@ h2 {
 }
 
 .card {
-    background: #f8f9fa;
+    background: #FFFFFF;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
 
 .card h3 {
     margin-top: 0;
-    color: #0A1931;
+    color: #2563EB;
 }
 
 /* About and contact sections */
@@ -108,7 +112,7 @@ h2 {
 }
 
 .contact-details a {
-    color: #0A1931;
+    color: #2563EB;
     text-decoration: none;
 }
 
@@ -118,14 +122,15 @@ h2 {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #CBD5E1;
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
 }
 
 .contact-form button {
-    background: #0A1931;
-    color: #fff;
+    background: #2563EB;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -135,12 +140,12 @@ h2 {
 }
 
 .contact-form button:hover {
-    background: #12295e;
+    background: #1E40AF;
 }
 
 footer {
-    background: #0A1931;
-    color: #fff;
+    background: #111827;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
