@@ -79,10 +79,15 @@
                 <li>Email: <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a></li>
                 <li>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></li>
             </ul>
-            <form class="contact-form" onsubmit="return false;">
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Correo electrónico" required>
-                <textarea rows="4" placeholder="Tu mensaje" required></textarea>
+            <!-- Contact form configured to send submissions via FormSubmit -->
+            <form class="contact-form" action="https://formsubmit.co/contacto@ejemplo.com" method="POST">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <textarea rows="4" name="message" placeholder="Tu mensaje" required></textarea>
+                <!-- Disable captcha for demonstration purposes -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Redirect back to the site after submission (optional) -->
+                <input type="hidden" name="_next" value="https://chrismultifuncional1.github.io/mi-sitio-web/#contacto">
                 <button type="submit">Enviar mensaje</button>
             </form>
         </section>
