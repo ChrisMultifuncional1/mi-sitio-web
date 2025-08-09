@@ -11,8 +11,11 @@
 <body>
     <!-- Hero section with navigation -->
     <header class="hero" id="inicio">
+        <!-- Particle container for animated background -->
+        <div id="tsparticles"></div>
         <nav class="navbar">
-            <div class="logo">Tech Store</div>
+            <!-- Replace text logo with an image logo -->
+            <img src="logo.png" alt="Tech Store logo" class="logo" />
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#categorias">Categorías</a></li>
@@ -96,5 +99,32 @@
     <footer>
         <p>&copy; 2025 Tech Store. Todos los derechos reservados.</p>
     </footer>
+    <!-- Load tsParticles library from CDN and initialize particles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        tsParticles.load('tsparticles', {
+          fullScreen: { enable: false },
+          particles: {
+            number: { value: 50 },
+            color: { value: ['#3B82F6', '#8B5CF6'] },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5 },
+            size: { value: { min: 1, max: 4 } },
+            move: { enable: true, speed: 1, direction: 'none', random: true },
+            lineLinked: { enable: false }
+          },
+          interactivity: {
+            events: {
+              onHover: { enable: true, mode: 'repulse' },
+              resize: true
+            },
+            modes: {
+              repulse: { distance: 60 }
+            }
+          }
+        });
+      });
+    </script>
 </body>
 </html>
