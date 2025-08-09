@@ -1,35 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Sitio Web</title>
+    <title>Nombre Profesional - Servicios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a mi sitio web</h1>
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre">Sobre mí</a>
-            <a href="#contacto">Contacto</a>
+    <!-- Hero section with navigation -->
+    <header class="hero" id="inicio">
+        <nav class="navbar">
+            <div class="logo">Nombre Profesional</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </nav>
+        <div class="hero-content">
+            <h1>Soluciones Profesionales</h1>
+            <p>Desarrollando proyectos y servicios de calidad para nuestros clientes.</p>
+        </div>
     </header>
     <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Este es un sitio web de ejemplo creado con la ayuda de ChatGPT.</p>
+        <!-- Servicios section -->
+        <section id="servicios" class="services">
+            <h2>Servicios</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Consultoría</h3>
+                    <p>Asesoramiento especializado para impulsar tu negocio.</p>
+                </div>
+                <div class="card">
+                    <h3>Desarrollo Web</h3>
+                    <p>Construimos sitios web modernos y funcionales para tu empresa.</p>
+                </div>
+                <div class="card">
+                    <h3>Soporte Técnico</h3>
+                    <p>Brindamos mantenimiento y soporte para tus plataformas digitales.</p>
+                </div>
+            </div>
         </section>
-        <section id="sobre">
-            <h2>Sobre mí</h2>
-            <p>Breve descripción para personalizar este sitio. Puedes actualizar este texto con tu propia información.</p>
+        <!-- Acerca de section -->
+        <section id="acerca" class="about">
+            <h2>Acerca de</h2>
+            <p>Con años de experiencia en la industria, ofrecemos servicios integrales que se adaptan a las necesidades de cada cliente. Nuestro objetivo es proporcionar soluciones innovadoras y resultados tangibles.</p>
         </section>
-        <section id="contacto">
+        <!-- Contacto section -->
+        <section id="contacto" class="contact">
             <h2>Contacto</h2>
-            <p>Puedes contactarme en <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a>.</p>
+            <p>Ponte en contacto para más información o solicita un presupuesto.</p>
+            <ul class="contact-details">
+                <li>Email: <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a></li>
+                <li>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></li>
+            </ul>
+            <form class="contact-form" onsubmit="return false;">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <textarea rows="4" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar mensaje</button>
+            </form>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Nombre Profesional. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
